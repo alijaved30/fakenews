@@ -10,15 +10,15 @@ import nltk  # Import nltk
 try:
     stop_words = set(stopwords.words('english'))
 except LookupError:
-    st.write("Downloading NLTK 'stopwords'...")  # Use st.write for feedback in Streamlit
+    st.write("Downloading NLTK 'stopwords'...")
     nltk.download('stopwords')
     stop_words = set(stopwords.words('english'))
 
 try:
     lemmatizer = WordNetLemmatizer()
 except LookupError:
-    st.write("Downloading NLTK 'wordnet'...")  # Use st.write for feedback in Streamlit
-    nltk.download('wordnet')
+    st.write("Downloading NLTK 'wordnet'...")
+    nltk.download('wordnet')  # Download wordnet here
     lemmatizer = WordNetLemmatizer()
 
 
